@@ -24,36 +24,69 @@
 let H1 = document.getElementById("h1").querySelector("h2")
 let promt =document.getElementById("prompt").addEventListener("click", function(){
     let req = prompt("Please enter your request");
-    let todo = [];
+// let todo = []; 
+
+// button.addEventListener("click", function() {
+//     let req = prompt("Please enter your request");
+
+//     while(true) {
+//         if(req === "quit") {
+//             console.log("Quitting app");
+//             break;
+//         }
+
+//         if (req == "list") {
+//             console.log("----------");
+//             for (let i = 0; i < todo.length; i++) {
+//                 console.log(i, todo[i]);
+//             }
+//             console.log("----------");      
+//         } else if (req == "add") {
+//             let task = prompt("Please enter the task you want to add");
+//             todo.push(task);
+//             console.log("Task added");
+//         } else if (req == "delete") {
+//             let index = parseInt(prompt("Please enter the index of the task you want to delete"));
+//             if (index >= 0 && index < todo.length) {
+//                 todo.splice(index, 1);
+//                 console.log("Task deleted");
+//             } else {
+//                 console.log("Invalid index");
+//             }
+//         }
+        
+//         req = prompt("Please enter your request");
 
 
-while(true) {
-    if(req === "quit") {
-        console.log("Qutting app");
-        break;
+//         H1.innerHTML = "";
+
+//         let ul = document.createElement("ul");
+//         todo.forEach((task) => {
+//             let li = document.createElement("li");
+//             li.textContent = `${task}`;
+//             ul.appendChild(li);
+//         });
+//         H1.appendChild(ul);
+//     }
+// });
+
+
+
+
+
+
+
+let H1 = document.getElementById("g1");
+let button = document.getElementById("prompt"); 
+let input = document.getElementById("number").value;
+const random = 1;
+
+let game = button.addEventListener("click", function() {
+    console.log(random,input);
+    if (input == random) {
+        alert("You won!");
+    } else {
+        alert("Try again!");
     }
-
-    if (req == "list") {
-        console.log("----------");
-        for( let i=0; i<todo.length; i++){
-            console.log(i, todo[i]);
-        }
-        console.log("----------");      
-    }else if(req == "add") {
-        let task = prompt("Please enter the task you want to add");
-        todo.push(task);
-        console.log("Task added");
-    }
-    else if(req == "delete") {
-        let index = prompt("Please enter the index of the task you want to delete");
-        todo.splice(index,1)
-        console.log("Task deleted");
-    }
-    req = prompt("Please enter your request");
-    let hh1 = document.createElement("h1"); 
-     hh1.innerHTML = `${todo}`; 
-     H1.appendChild(hh1); 
-
-}
-})
+});
 
