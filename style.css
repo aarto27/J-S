@@ -1,14 +1,50 @@
 
 
-#prompt{
+
+.btn:hover{
+    background-color: #f94f4f;
+}
+.btn{
+    margin: 2%;
     border: none;
     padding: 10px;
     border-radius: 10px;
     background-color: #f94f4f9f;
-    width: 10%;
+    width: 20%;
     box-sizing: border-box;
     font-size: 16px;
     font-family: Arial, sans-serif;
     color: #333;
     cursor: pointer;
+    transition: 0.3s;
+}
+#number{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffb9b99f;
+    width: 95%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+#number:hover{
+    background-color:#ff000055;
+}
+
+#div{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0);
 }
