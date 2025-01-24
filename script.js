@@ -77,16 +77,41 @@ let promt =document.getElementById("prompt").addEventListener("click", function(
 
 
 let H1 = document.getElementById("g1");
-let button = document.getElementById("prompt"); 
-let input = document.getElementById("number").value;
-const random = 1;
+let H2 = document.getElementById("g2");
+let button = document.getElementById("prompt");
+let quitButton = document.getElementById("quit");
 
-let game = button.addEventListener("click", function() {
-    console.log(random,input);
-    if (input == random) {
-        alert("You won!");
+const random = Math.floor(Math.random() * 100) + 1;
+let attempts = 10;
+
+button.addEventListener("click", function () {
+ 
+    let input = parseInt(document.getElementById("number").value);
+
+    attempts--;
+
+  if (input === random) {
+    H1.innerText = `Congratulations! You guessed the correct number in ${10 - attempts} turns.`;
+    H2.innerText = "";
+    button.disabled = true;
+  } else if (attempts > 0) {
+    if (input < random) {
+      H1.innerText = "Hint: Your guess was too small. Please try again.";
     } else {
-        alert("Try again!");
+      H1.innerText = "Hint: Your guess was too big. Please try again.";
     }
+    H2.innerText = `You have ${attempts} attempts left.`;
+  } else {
+    H1.innerText = `Game over! The correct number was ${random}.`;
+    H2.innerText = "";
+    button.disabled = true;
+  }
 });
+
+quitButton.addEventListener("click", function () {
+  H1.innerText = "Game ended. Better luck next time!";
+  H2.innerText = "";
+  button.disabled = true;
+});
+
 
